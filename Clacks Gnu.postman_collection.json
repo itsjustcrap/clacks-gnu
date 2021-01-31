@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "5fdb36d1-72bb-412b-bf68-e554efbbd1fa",
+		"name": "Clacks Gnu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET a GNU",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gnu.myfqdn.org/gnu",
+					"protocol": "https",
+					"host": [
+						"gnu",
+						"myfqdn",
+						"org"
+					],
+					"path": [
+						"gnu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET a GNU for someone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gnu.myfqdn.org/gnu?name=Bill",
+					"protocol": "https",
+					"host": [
+						"gnu",
+						"myfqdn",
+						"org"
+					],
+					"path": [
+						"gnu"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Bill"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST a name, get a GNU",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Bill Kurke"
+				},
+				"url": {
+					"raw": "https://gnu.myfqdn.org/gnu",
+					"protocol": "https",
+					"host": [
+						"gnu",
+						"myfqdn",
+						"org"
+					],
+					"path": [
+						"gnu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT your GNU in the response header",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"gnu\":\"John\"}"
+				},
+				"url": {
+					"raw": "https://gnu.myfqdn.org/gnu",
+					"protocol": "https",
+					"host": [
+						"gnu",
+						"myfqdn",
+						"org"
+					],
+					"path": [
+						"gnu"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
